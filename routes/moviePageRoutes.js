@@ -506,7 +506,7 @@ router.delete('/bookings/:movieId/:bookingId', userVerifyToken, async (req, res)
 
 //To add review
 
-router.post('/review/:title',userVerifyToken, async (req, res) => {
+router.post('/review/:title', async (req, res) => {
   try {
     const { title } = req.params;
     const decodedTitle = decodeURIComponent(title);
@@ -582,7 +582,7 @@ router.delete('/review/:title/:reviewId', async (req, res) => {
 
 
 //To get the review 
-router.get('/reviews/:title',userVerifyToken, async (req, res) => {
+router.get('/reviews/:title', async (req, res) => {
   try {
     const { title } = req.params;
     const decodedTitle = decodeURIComponent(title);
